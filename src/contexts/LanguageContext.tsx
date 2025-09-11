@@ -98,7 +98,7 @@ const translations = {
     'features.sustainable.description': 'Bersumber etis dari praktik pertanian yang bertanggung jawab',
     'features.crafted.title': 'Dibuat dengan',
     'features.crafted.highlight': 'Hati',
-    'features.crafted.description1': 'Setiap batch gula merah Kamika diproses dengan hati-hati untuk mempertahankan kandungan molase alami, memberikan Anda rasa khas yang kaya dan warna cokelat keemasan yang indah yang membuat resep Anda istimewa.',
+    'features.crafted.description1': 'Setiap batch gula merah Kamika diproduksi dengan hati-hati untuk mempertahankan kandungan molase alami, memberikan Anda rasa khas yang kaya dan warna cokelat keemasan yang indah yang membuat resep Anda istimewa.',
     'features.crafted.description2': 'Dari ladang kami ke dapur Anda, kami mempertahankan standar kualitas dan kemurnian tertinggi, memastikan setiap sendok memberikan rasa autentik gula merah premium.',
     'features.textureAlt': 'Tekstur close-up kristal gula merah Kamika menunjukkan warna emas alami',
 
