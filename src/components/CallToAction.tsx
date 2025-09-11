@@ -23,7 +23,12 @@ const CallToAction = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button variant="secondary" size="lg" className="text-lg px-12 py-6 bg-cream text-brown-rich hover:bg-gold-light shadow-glow">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="text-lg px-12 py-6 bg-cream text-brown-rich hover:bg-gold-light shadow-glow"
+              onClick={() => window.open('https://wa.me/6281287098907', '_blank')}
+            >
               {t('cta.orderNow')}
             </Button>
             <div className="text-primary-foreground/80">
