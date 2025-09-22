@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import sugarCaneField from "@/assets/sugar-cane-field.jpg";
+import palmTrees from "@/assets/palm-trees.png";
 
 const About = () => {
   const { t } = useLanguage();
@@ -38,7 +38,7 @@ const About = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-warm rounded-3xl transform rotate-3 opacity-20"></div>
             <img 
-              src={sugarCaneField} 
+              src={palmTrees} 
               alt={t('about.fieldAlt')}
               className="w-full h-auto rounded-3xl shadow-warm"
             />

@@ -55,7 +55,7 @@ const translations = {
     'about.description2': 'Our sugar cane is grown in optimal conditions, harvested at peak ripeness, and processed using time-honored techniques that preserve the natural molasses content. This gives Kamika its distinctive rich flavor and beautiful color.',
     'about.description3': 'Every package of Kamika brown sugar is a testament to our commitment to quality, sustainability, and the pure joy of natural sweetness.',
     'about.shopKamika': 'Shop Kamika',
-    'about.fieldAlt': 'Golden sugar cane field at sunset representing natural origin of Kamika brown sugar',
+    'about.fieldAlt': 'Towering palm trees with sunlight filtering through, representing the natural source of Kamika brown sugar',
 
     // Call to Action section
     'cta.title': 'Ready to Experience',
@@ -161,7 +161,7 @@ const translations = {
     'about.description2': 'Tebu kami ditanam dalam kondisi optimal, dipanen pada saat kematangan puncak, dan diproses menggunakan teknik modern yang melestarikan kandungan molase alami. Ini memberikan Kamika rasa khas yang kaya dan warna yang indah.',
     'about.description3': 'Setiap kemasan gula merah Kamika adalah bukti komitmen kami terhadap kualitas, keberlanjutan, dan kegembiraan murni dari rasa manis alami.',
     'about.shopKamika': 'Belanja Kamika',
-    'about.fieldAlt': 'Ladang tebu emas saat matahari terbenam yang mewakili asal alami gula merah Kamika',
+    'about.fieldAlt': 'Pohon aren yang menjulang tinggi dengan sinar matahari yang menyaring, mewakili sumber alami gula merah Kamika',
 
     // Call to Action section
     'cta.title': 'Siap Merasakan',

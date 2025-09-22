@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ArrowLeft, MapPin, Phone, Mail, Clock, Award, Users, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
-import sugarCaneField from "@/assets/sugar-cane-field.jpg";
+import palmTrees from "@/assets/palm-trees.png";
 import heroImage from "@/assets/hero-brown-sugar.jpg";
 
 const About = () => {
@@ -49,7 +49,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-warm rounded-3xl transform rotate-3 opacity-20"></div>
               <img 
-                src={sugarCaneField} 
+                src={palmTrees} 
                 alt={t('about.fieldAlt')}
                 className="w-full h-auto rounded-3xl shadow-warm"
               />
