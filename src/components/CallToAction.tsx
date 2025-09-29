@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 import { Mail, MessageCircle } from "lucide-react";
 const CallToAction = () => {
-  const {
-    t
-  } = useLanguage();
+  const { t } = useLanguage();
+  const navigate = useNavigate();
   return <section className="py-24 bg-gradient-warm relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-20 h-20 bg-gold-warm rounded-full"></div>
@@ -28,7 +28,7 @@ const CallToAction = () => {
               variant="secondary" 
               size="lg" 
               className="text-lg px-12 py-6 bg-cream text-brown-rich hover:bg-gold-light shadow-glow"
-              onClick={() => window.open('https://wa.me/6281287098907', '_blank')}
+              onClick={() => navigate('/products')}
             >
               {t('cta.orderNow')}
             </Button>

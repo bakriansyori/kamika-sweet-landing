@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 import heroImage from "@/assets/hero-brown-sugar.jpg";
 
 const Hero = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -24,10 +26,20 @@ const Hero = () => {
               {t('hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="text-lg px-8 py-6"
+                onClick={() => navigate('/products')}
+              >
                 {t('hero.orderNow')}
               </Button>
-              <Button variant="outline-warm" size="lg" className="text-lg px-8 py-6">
+              <Button 
+                variant="outline-warm" 
+                size="lg" 
+                className="text-lg px-8 py-6"
+                onClick={() => navigate('/products')}
+              >
                 {t('hero.learnMore')}
               </Button>
             </div>
