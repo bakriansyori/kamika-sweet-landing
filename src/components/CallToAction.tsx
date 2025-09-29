@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Mail } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 const CallToAction = () => {
   const {
     t
@@ -34,7 +34,7 @@ const CallToAction = () => {
             </Button>
             <div className="text-primary-foreground/80">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">📞</span>
+                <MessageCircle className="w-6 h-6 text-green-400" />
                 <span className="font-medium">{t('cta.contactNumber')}</span>
               </div>
               <div className="flex items-center gap-2">
