@@ -64,7 +64,7 @@ const translations = {
     'cta.orderNow': 'Order Kamika Now',
     'cta.contactNumber': 'Call to order: +62 812 8709 8907',
     'cta.freeShipping': 'Free shipping on orders over $50',
-    'cta.guarantee': 'Satisfaction guarantee',
+    'cta.guarantee': 'kamikanusa@gmail.com',
 
     // Footer
     'footer.description': 'Premium brown sugar crafted with care for exceptional taste and quality.',
@@ -170,7 +170,7 @@ const translations = {
     'cta.orderNow': 'Pesan Kamika Sekarang',
     'cta.contactNumber': 'Hubungi untuk pesan: +62 812 8709 8907',
     'cta.freeShipping': 'Gratis ongkir untuk pembelian di atas $50',
-    'cta.guarantee': 'Jaminan kepuasan',
+    'cta.guarantee': 'kamikanusa@gmail.com',
 
     // Footer
     'footer.description': 'Gula merah premium yang dibuat dengan perhatian untuk rasa dan kualitas yang luar biasa.',
