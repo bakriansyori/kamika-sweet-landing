@@ -64,7 +64,7 @@ const Features = () => {
             <img 
               src={productTexture} 
               alt={t('features.textureAlt')}
-              className="relative z-10 w-full h-auto rounded-3xl shadow-warm"
+              className="relative z-10 w-full h-auto rounded-3xl shadow-warm transform hover:scale-105 transition-smooth"
             />
           </div>
           <div>
