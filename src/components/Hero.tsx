@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
-import heroImage from "@/assets/hero-brown-sugar.jpg";
+import heroImage from "@/assets/sugar-in-bowl.png";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -45,11 +45,11 @@ const Hero = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-warm rounded-3xl transform rotate-6 opacity-20"></div>
+            <div className="absolute inset-0 bg-gradient-warm rounded-3xl transform rotate-6 opacity-20 z-0"></div>
             <img 
               src={heroImage} 
               alt={t('hero.altText')}
-              className="w-full h-auto rounded-3xl shadow-warm transform hover:scale-105 transition-smooth"
+              className="relative z-10 w-full h-auto rounded-3xl shadow-warm transform hover:scale-105 transition-smooth"
             />
           </div>
         </div>
