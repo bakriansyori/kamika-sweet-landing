@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import palmTrees from "@/assets/palm-trees.png";
+import palmTrees from "@/assets/pohon-aren.png";
 
 const About = () => {
   const { t } = useLanguage();
