@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import productTexture from "@/assets/kopi-susu.png";
+import productTexture from "@/assets/kopi-susu-gula-semut.png";
 
 const Features = () => {
   const { t } = useLanguage();
