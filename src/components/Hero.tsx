@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 import heroImage from "@/assets/sugar-in-bowl.png";
+import logo from "@/assets/kamika-logo.png";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -11,6 +13,15 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-subtle" />
+      <div className="absolute top-6 left-6 z-20">
+        <Link to="/" className="block hover:scale-105 transition-smooth">
+          <img 
+            src={logo} 
+            alt="Kamika Nusa Logo" 
+            className="h-16 w-auto"
+          />
+        </Link>
+      </div>
       <div className="absolute top-6 right-6 z-20">
         <LanguageSwitcher />
       </div>
