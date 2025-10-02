@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Home, Star, Leaf, Award, Package, ShoppingCart, Heart } from "lucide-react";
 import heroImage from "@/assets/hero-brown-sugar.jpg";
 import textureImage from "@/assets/product-texture.jpg";
+import logo from "@/assets/kamika-logo.png";
 
 const Products = () => {
   const { t } = useLanguage();
@@ -83,8 +84,19 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-warm text-primary-foreground">
+      <section className="py-24 bg-gradient-warm text-primary-foreground relative">
         <div className="container mx-auto px-6">
+          {/* Logo */}
+          <div className="absolute top-6 left-6">
+            <Link to="/" className="block hover:scale-105 transition-smooth">
+              <img 
+                src={logo} 
+                alt="Kamika Nusa Logo" 
+                className="h-32 w-auto"
+              />
+            </Link>
+          </div>
+          
           {/* Home Button */}
           <div className="mb-8">
             <Link to="/">

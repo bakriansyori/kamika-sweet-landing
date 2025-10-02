@@ -7,6 +7,7 @@ import { MapPin, Phone, Mail, Clock, MessageCircle, Send, Home } from "lucide-re
 import { useState } from "react";
 import { toast } from "@/components/ui/sonner";
 import { Link } from "react-router-dom";
+import logo from "@/assets/kamika-logo.png";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -46,8 +47,19 @@ ${formData.message}`;
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-warm text-primary-foreground">
+      <section className="py-24 bg-gradient-warm text-primary-foreground relative">
         <div className="container mx-auto px-6">
+          {/* Logo */}
+          <div className="absolute top-6 left-6">
+            <Link to="/" className="block hover:scale-105 transition-smooth">
+              <img 
+                src={logo} 
+                alt="Kamika Nusa Logo" 
+                className="h-32 w-auto"
+              />
+            </Link>
+          </div>
+          
           {/* Home Button */}
           <div className="mb-8">
             <Link to="/">
