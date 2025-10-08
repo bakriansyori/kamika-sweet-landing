@@ -26,7 +26,7 @@ const Hero = () => {
         <LanguageSwitcher />
       </div>
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mt-32">
           <div className="text-center lg:text-left">
             <h1 className="text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
               <span className="text-brown-rich">{t('hero.title.kamika')}</span>
