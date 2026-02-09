@@ -15,5 +15,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/bakriansyori.github.io' // Tambahan baru untuk base direktori
+  base: '/kamika-sweet-landing/' // Tambahan baru untuk base direktori
 }));
