@@ -16,5 +16,4 @@ base: '/kamika-sweet-landing/' // Tambahan baru untuk base direktori
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/' // Tambahan baru untuk base direktori
 }));
