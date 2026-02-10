@@ -26,37 +26,36 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # Gunakan ci untuk reproducible builds
 
       - name: Build
         run: npm run build
 
-      # === TAMBAHKAN INI === #
-      - name: Fix SPA Routing - Create 404.html
+      # === IMPROVED VERSION === #
+      - name: Fix SPA Routing for GitHub Pages
         run: |
-          # Copy index.html ke 404.html di dist folder
+          # 1. Pastikan folder dist ada
+          mkdir -p ./dist
+          
+          # 2. Buat CNAME file untuk custom domain
+          echo "kamika.adwayaprana.com" > ./dist/CNAME
+          
+          # 3. Buat .nojekyll untuk disable Jekyll processing
+          touch ./dist/.nojekyll
+          
+          # 4. Buat 404.html dari index.html (SPA fallback)
           cp ./dist/index.html ./dist/404.html
           
-          # Atau buat custom 404.html
-          echo '<!DOCTYPE html>
-          <html>
-          <head>
-            <meta charset="utf-8">
-            <title>Redirecting...</title>
-            <script>
-              // Redirect semua ke index.html
-              sessionStorage.redirect = location.pathname;
-              window.location.href = "/" + location.pathname;
-            </script>
-          </head>
-          <body>
-            <p>Redirecting...</p>
-          </body>
-          </html>' > ./dist/404.html
+          # 5. Optional: Tambahkan script ke 404.html untuk handle redirect
+          sed -i 's|<head>|<head>\n  <script>\n    // SPA redirect for GitHub Pages\n    const path = window.location.pathname;\n    if (path && path !== "/") {\n      sessionStorage.setItem("redirectPath", path);\n      window.location.href = "/";\n    }\n  </script>|' ./dist/404.html
           
-          # Buat .nojekyll file untuk disable Jekyll
-          touch ./dist/.nojekyll
-      # ==================== #
+          # 6. Fix base href jika belum ada
+          if ! grep -q "<base href=" ./dist/index.html; then
+            sed -i 's|<head>|<head>\n  <base href="/">|' ./dist/index.html
+          fi
+          
+          echo "✓ SPA routing configured for GitHub Pages"
+      # ======================== #
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
