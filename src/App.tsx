@@ -18,7 +18,8 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/"> {/* ← TAMBAHKAN INI */}>
+        <BrowserRouter basename="/"> 
+          {/* ← TAMBAHKAN INI */}
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
