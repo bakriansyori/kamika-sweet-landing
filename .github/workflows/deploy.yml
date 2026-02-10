@@ -34,9 +34,6 @@ jobs:
       # === IMPROVED VERSION === #
       - name: Fix SPA Routing for GitHub Pages
         run: |
-          # 1. Pastikan folder dist ada
-          mkdir -p ./dist
-          
           # 2. Buat CNAME file untuk custom domain
           echo "kamika.adwayaprana.com" > ./dist/CNAME
           
@@ -45,14 +42,6 @@ jobs:
           
           # 4. Buat 404.html dari index.html (SPA fallback)
           cp ./dist/index.html ./dist/404.html
-          
-          # 5. Optional: Tambahkan script ke 404.html untuk handle redirect
-          sed -i 's|<head>|<head>\n  <script>\n    // SPA redirect for GitHub Pages\n    const path = window.location.pathname;\n    if (path && path !== "/") {\n      sessionStorage.setItem("redirectPath", path);\n      window.location.href = "/";\n    }\n  </script>|' ./dist/404.html
-          
-          # 6. Fix base href jika belum ada
-          if ! grep -q "<base href=" ./dist/index.html; then
-            sed -i 's|<head>|<head>\n  <base href="/">|' ./dist/index.html
-          fi
           
           echo "✓ SPA routing configured for GitHub Pages"
       # ======================== #
