@@ -23,34 +23,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-
-    <script>
-      // Fallback handler untuk SPA routing
-      window.addEventListener('load', function() {
-        // Handle redirect dari 404.html
-        const redirectPath = sessionStorage.getItem('redirectPath');
-        if (redirectPath) {
-          sessionStorage.removeItem('redirectPath');
-          
-          // Update URL tanpa reload page
-          window.history.replaceState(null, '', redirectPath);
-          
-          // Trigger React Router untuk navigasi
-          window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
-        }
-        
-        // Fallback jika langsung akses URL tanpa hash
-        const currentPath = window.location.pathname;
-        if (currentPath !== '/' && !window.location.hash) {
-          // Cek apakah ini direct access ke route
-          const knownRoutes = ['/about', '/products', '/contact'];
-          if (knownRoutes.includes(currentPath)) {
-            // Redirect ke hash mode sebagai last resort
-            window.location.hash = currentPath;
-          }
-        }
-      });
-    </script>
-    
   </body>
 </html>
